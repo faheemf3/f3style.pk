@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product — F3Style.pk</title>
+    <meta name="description" content="View product details and add to cart at F3Style.pk.">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">F3<span>Style</span>.pk</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Shop</a></li>
+                <li><a href="products.html?cat=boys-shirts">Boys</a></li>
+                <li><a href="products.html?cat=girls-shirts">Girls</a></li>
+                <li><a href="products.html?cat=jewelry">Jewelry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="nav-search-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+                <button class="nav-cart-btn" id="cartBtn"><i class="fas fa-shopping-bag"></i><span
+                        class="cart-count hidden" id="cartCount">0</span></button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><a href="products.html">Shop All</a><a
+            href="contact.html">Contact</a></div>
+    <div class="search-overlay" id="searchOverlay"><button class="search-close" id="searchClose">&times;</button>
+        <div class="search-box"><i class="fas fa-search search-icon"></i><input type="text" id="searchInput"
+                placeholder="Search products..."></div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3>Shopping Bag</h3><button class="cart-close-btn" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-drawer-items" id="cartDrawerItems">
+            <div class="cart-empty" id="cartEmpty">
+                <div class="icon"><i class="fas fa-shopping-bag"></i></div>
+                <p>Your bag is empty</p>
+            </div>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-total"><span>Total</span><span class="amount" id="cartTotal">Rs. 0</span></div><a
+                href="cart.html" class="cart-checkout-btn">View Cart & Checkout</a>
+        </div>
+    </div>
+    <div class="toast" id="toast"><span class="icon"><i class="fas fa-check-circle"></i></span><span id="toastMsg">Added
+            to cart!</span></div>
+
+    <div class="page-header" style="padding-bottom:20px;">
+        <div class="breadcrumb"><a href="index.html">Home</a> <i class="fas fa-chevron-right"
+                style="font-size:0.6rem;"></i> <a href="products.html">Shop</a> <i class="fas fa-chevron-right"
+                style="font-size:0.6rem;"></i> <span>Product</span></div>
+    </div>
+
+    <section class="section" style="padding-top:20px;">
+        <div class="container" id="productDetailContainer"></div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom"><span>&copy; 2026 F3Style.pk — All Rights Reserved</span><span>Designed with <i
+                        class="fas fa-heart" style="color:var(--accent);"></i> in Pakistan</span></div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F3Style.pk — Premium Branded Fashion & Jewelry</title>
+    <meta name="description"
+        content="Shop the finest branded shirts for boys & girls and elegant jewelry at F3Style.pk. Premium fashion delivered to your doorstep across Pakistan.">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">F3<span>Style</span>.pk</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="products.html?cat=boys-shirts">Boys</a></li>
+                <li><a href="products.html?cat=girls-shirts">Girls</a></li>
+                <li><a href="products.html?cat=jewelry">Jewelry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="nav-search-btn" id="searchBtn" aria-label="Search"><i class="fas fa-search"></i></button>
+                <button class="nav-cart-btn" id="cartBtn" aria-label="Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count hidden" id="cartCount">0</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop All</a>
+        <a href="products.html?cat=boys-shirts">Boys Shirts</a>
+        <a href="products.html?cat=girls-shirts">Girls Shirts</a>
+        <a href="products.html?cat=jewelry">Jewelry</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <button class="search-close" id="searchClose">&times;</button>
+        <div class="search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3>Shopping Bag</h3>
+            <button class="cart-close-btn" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-drawer-items" id="cartDrawerItems">
+            <div class="cart-empty" id="cartEmpty">
+                <div class="icon"><i class="fas fa-shopping-bag"></i></div>
+                <p>Your bag is empty</p>
+            </div>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span class="amount" id="cartTotal">Rs. 0</span>
+            </div>
+            <a href="cart.html" class="cart-checkout-btn">View Cart & Checkout</a>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <span class="icon"><i class="fas fa-check-circle"></i></span>
+        <span id="toastMsg">Added to cart!</span>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text fade-up">
+                    <h1>Style That<span>Defines You <i class="fas fa-heart heart-3d"></i></span></h1>
+                    <p>Premium shirts and statement jewelry crafted for the new generation of trendsetters.</p>
+                    <div class="hero-buttons">
+                        <a href="products.html" class="btn btn-primary"><i class="fas fa-shopping-bag"></i> Shop Now</a>
+                        <a href="#categories" class="btn btn-outline">Explore Collections</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <h3>500+</h3>
+                            <p>Products</p>
+                        </div>
+                        <div class="hero-stat">
+                            <h3>10K+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="hero-stat">
+                            <h3>100%</h3>
+                            <p>Authentic Brands</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image fade-up">
+                    <img src="images/hero-banner.png" alt="F3Style Fashion Collection" loading="eager">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section" id="categories">
+        <div class="container">
+            <h2 class="section-title fade-up">Shop by <span>Category</span></h2>
+            <p class="section-subtitle fade-up">Explore our curated collections tailored to your unique style</p>
+            <div class="categories-grid">
+                <a href="products.html?cat=boys-shirts" class="category-card fade-up">
+                    <img src="images/boys-shirt-1.png" alt="Boys Shirts Collection">
+                    <div class="category-overlay">
+                        <h3>Boys Shirts</h3>
+                        <p>Branded polo, casual & graphic tees</p>
+                        <span class="category-link">Shop Now <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="products.html?cat=girls-shirts" class="category-card fade-up">
+                    <img src="images/girls-shirt-1.png" alt="Girls Shirts Collection">
+                    <div class="category-overlay">
+                        <h3>Girls Shirts</h3>
+                        <p>Trendy tops, elegant blouses & more</p>
+                        <span class="category-link">Shop Now <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="products.html?cat=jewelry" class="category-card fade-up">
+                    <img src="images/jewelry-1.png" alt="Girls Jewelry Collection">
+                    <div class="category-overlay">
+                        <h3>Girls Jewelry</h3>
+                        <p>Necklaces, earrings, bracelets & rings</p>
+                        <span class="category-link">Shop Now <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="section" id="featured" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title fade-up">Featured <span>Products</span></h2>
+            <p class="section-subtitle fade-up">Handpicked favorites our customers absolutely love</p>
+            <div class="products-grid" id="featuredProducts"></div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title fade-up">What Customers <span>Say</span></h2>
+            <p class="section-subtitle fade-up">Read genuine reviews from our happy shoppers</p>
+            <div class="testimonials-slider fade-up">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Amazing quality shirts! The fabric is so soft, and the designs are very stylish. My go-to store
+                        for branded fashion."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">A</div>
+                        <div>
+                            <h4>Ayesha Khan</h4><span>Lahore</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Ordered a jewelry set for my sister's birthday. She absolutely loved it! Beautiful packaging and
+                        fast delivery."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">U</div>
+                        <div>
+                            <h4>Usman Ali</h4><span>Islamabad</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★☆</div>
+                    <p>"Great collection of boys shirts. My kids love wearing them. The quality is premium and prices
+                        are very reasonable."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">S</div>
+                        <div>
+                            <h4>Sara Malik</h4><span>Karachi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"F3Style has the best jewelry selection online. Every piece is elegant and well-crafted. Highly
+                        recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">F</div>
+                        <div>
+                            <h4>Fatima Noor</h4><span>Rawalpindi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section">
+        <div class="container">
+            <div class="newsletter fade-up">
+                <h2>Stay in <span style="color:var(--accent)">Style</span></h2>
+                <p>Subscribe to get exclusive deals, new arrivals, and fashion tips straight to your inbox.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Thanks for subscribing!');">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">F3<span>Style</span>.pk</a>
+                    <p>Your one-stop destination for premium branded fashion and exquisite jewelry. Shop with confidence
+                        — authenticity guaranteed.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/923047844965?text=Hi%20F3Style!%20I%20am%20interested%20in%20your%20products.%20Please%20share%20details."
+                            target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok"><i
+                                class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop All</a></li>
+                        <li><a href="products.html?cat=boys-shirts">Boys Shirts</a></li>
+                        <li><a href="products.html?cat=girls-shirts">Girls Shirts</a></li>
+                        <li><a href="products.html?cat=jewelry">Jewelry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><span class="icon"><i class="fas fa-map-marker-alt"></i></span>Shop No. 26, Rana Market,
+                            Lidher, Lahore Cantt</li>
+                        <li><span class="icon"><i class="fas fa-phone"></i></span>+92 304 7844965</li>
+                        <li><span class="icon"><i class="fas fa-envelope"></i></span>faheemf3f@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 F3Style.pk — All Rights Reserved. Owned by <strong><em>Faheem F3</em></strong></span>
+                <span>Designed with <i class="fas fa-heart" style="color:var(--accent);"></i> in Pakistan</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
