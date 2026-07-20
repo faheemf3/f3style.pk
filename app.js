@@ -7,12 +7,16 @@
 const BOYS_COUNT = 3;   // Number of images in images/boys/
 const GIRLS_COUNT = 3;   // Number of images in images/girls/
 const JEWELRY_COUNT = 3;   // Number of images in images/jewelry/
+const MEN_COUNT = 4;     // Number of images in images/men/
+const WOMENS_COUNT = 3;  // Number of images in images/womens/
 
 // Default names & prices (used when no custom override exists)
 const DEFAULTS = {
     "boys-shirts": { namePrefix: "Boys Shirt", price: 2499, sizes: ["S", "M", "L", "XL"] },
     "girls-shirts": { namePrefix: "Girls Shirt", price: 2199, sizes: ["XS", "S", "M", "L"] },
-    "jewelry": { namePrefix: "Jewelry", price: 3499, sizes: [] }
+    "jewelry": { namePrefix: "Jewelry", price: 3499, sizes: [] },
+    "men-shirts": { namePrefix: "Men Shirt", price: 2999, sizes: ["S", "M", "L", "XL"] },
+    "womens-shirts": { namePrefix: "Womens Shirt", price: 2799, sizes: ["XS", "S", "M", "L"] }
 };
 
 // ★ CUSTOM OVERRIDES — Set name/price/description for specific products
@@ -27,6 +31,13 @@ const CUSTOM = {
     "jewelry-1": { name: "Gold Necklace & Earring Set", price: 4599, originalPrice: 5800, badge: "sale", rating: 4.8, reviews: 312, description: "Exquisite gold necklace and earring set with delicate gemstones. Perfect for special occasions." },
     "jewelry-2": { name: "Crystal Charm Bracelet", price: 2299, originalPrice: null, badge: "new", rating: 4.6, reviews: 178, description: "Stunning silver bracelet with crystal stones and charm details. A sparkling statement piece." },
     "jewelry-3": { name: "Pearl Drop Earrings", price: 1799, originalPrice: 2200, badge: "sale", rating: 4.7, reviews: 145, description: "Beautiful pearl and gold drop earrings. Elegant, lightweight and perfect for everyday wear." },
+    "men-1": { name: "Classic White Men Shirt", price: 2999, originalPrice: 3500, badge: "new", rating: 4.8, reviews: 110, description: "Classic white shirt for men. Perfect for formal wear." },
+    "men-2": { name: "Casual Check Shirt", price: 2499, originalPrice: null, badge: "sale", rating: 4.5, reviews: 85, description: "Comfortable check shirt for casual outings." },
+    "men-3": { name: "Black Denim Shirt", price: 3499, originalPrice: 4200, badge: "new", rating: 4.9, reviews: 200, description: "Stylish black denim shirt." },
+    "men-4": { name: "Blue Striped Shirt", price: 2799, originalPrice: null, badge: null, rating: 4.6, reviews: 95, description: "Blue striped shirt for everyday wear." },
+    "womens-1": { name: "Floral Print Top", price: 2799, originalPrice: 3200, badge: "sale", rating: 4.7, reviews: 150, description: "Beautiful floral print top for women." },
+    "womens-2": { name: "Solid Red Blouse", price: 2499, originalPrice: null, badge: "new", rating: 4.6, reviews: 120, description: "Elegant solid red blouse." },
+    "womens-3": { name: "White Chiffon Shirt", price: 3199, originalPrice: 3800, badge: "sale", rating: 4.8, reviews: 180, description: "Premium white chiffon shirt." }
 };
 
 // Auto-generate products from folder images
@@ -37,6 +48,8 @@ function generateProducts() {
         { key: "boys-shirts", folder: "images/boys", count: BOYS_COUNT },
         { key: "girls-shirts", folder: "images/girls", count: GIRLS_COUNT },
         { key: "jewelry", folder: "images/jewelry", count: JEWELRY_COUNT },
+        { key: "men-shirts", folder: "images/men", count: MEN_COUNT },
+        { key: "womens-shirts", folder: "images/womens", count: WOMENS_COUNT },
     ];
     categories.forEach(cat => {
         const def = DEFAULTS[cat.key];
@@ -67,7 +80,9 @@ const PRODUCTS = generateProducts();
 const CATEGORY_LABELS = {
     "boys-shirts": "Boys Shirts",
     "girls-shirts": "Girls Shirts",
-    "jewelry": "Jewelry"
+    "jewelry": "Jewelry",
+    "men-shirts": "Men Shirts",
+    "womens-shirts": "Womens Shirts"
 };
 
 // ========== Cart ==========
